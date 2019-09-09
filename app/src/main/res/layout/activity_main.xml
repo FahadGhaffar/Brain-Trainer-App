@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/gobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#8CE633"
+        android:onClick="Start"
+        android:padding="60dp"
+        android:text="Go"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/playAgainbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/answertextView"
+            android:layout_centerInParent="true"
+            android:backgroundTint="#40D347"
+            android:onClick="playAgain"
+            android:padding="20dp"
+            android:text="PlayAgain"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/correcttextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#FF5722"
+            android:padding="10dp"
+            android:text="0/0"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/questiontextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+
+            android:padding="15dp"
+
+            android:text="3+3"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/answertextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/answerGridLayout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/timetextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="#FF5722"
+            android:padding="10dp"
+            android:text="30s"
+            android:textSize="30sp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/answerGridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questiontextView"
+            android:layout_marginTop="40dp">
+
+
+            <Button
+                android:id="@+id/answerbutton0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#50B8E7"
+                android:onClick="chooseAnswer"
+                android:tag="0"
+                android:text="3"
+                android:textColor="@android:color/background_dark"
+                android:textSize="80sp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/answerbutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#82E6DB"
+                android:onClick="chooseAnswer"
+                android:tag="1"
+                android:text="3"
+                android:textColor="@android:color/background_dark"
+                android:textSize="80sp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/answerbutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E0E958"
+                android:onClick="chooseAnswer"
+                android:tag="2"
+                android:text="3"
+                android:textColor="@android:color/background_dark"
+                android:textSize="80sp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/answerbutton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DFB933"
+                android:onClick="chooseAnswer"
+                android:tag="3"
+                android:text="3"
+
+                android:textColor="@android:color/background_dark"
+                android:textSize="80sp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
